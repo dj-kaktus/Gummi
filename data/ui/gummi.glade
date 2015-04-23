@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.18.3 -->
+<!-- Generated with glade 3.16.1 -->
 <interface>
-  <requires lib="gtk+" version="3.12"/>
+  <requires lib="gtk+" version="3.2"/>
   <object class="GtkWindow" id="errorwindow">
     <property name="can_focus">False</property>
     <child>
@@ -15,8 +15,8 @@
           <object class="GtkLabel" id="error_header">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">PDF Preview could not initialise.</property>
             <property name="yalign">1</property>
+            <property name="label" translatable="yes">PDF Preview could not initialise.</property>
             <attributes>
               <attribute name="weight" value="semibold"/>
             </attributes>
@@ -43,10 +43,10 @@
           <object class="GtkLabel" id="error_details">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="yalign">0</property>
             <property name="justify">center</property>
             <property name="wrap">True</property>
             <property name="wrap_mode">char</property>
-            <property name="yalign">0</property>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -98,13 +98,15 @@
               <object class="GtkLabel" id="label2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="xalign">0</property>
                 <property name="label" translatable="yes">File:</property>
                 <property name="justify">fill</property>
-                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -112,25 +114,29 @@
                 <property name="width_request">80</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="xalign">0</property>
                 <property name="label" translatable="yes">Caption:</property>
                 <property name="justify">fill</property>
-                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">1</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="label4">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Label:</property>
                 <property name="xalign">0</property>
+                <property name="label" translatable="yes">Label:</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">2</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -146,6 +152,8 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -161,6 +169,8 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">1</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -176,18 +186,22 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">2</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="label5">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Scale:</property>
                 <property name="xalign">0</property>
+                <property name="label" translatable="yes">Scale:</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">3</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -206,6 +220,8 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">3</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
           </object>
@@ -271,13 +287,15 @@
               <object class="GtkLabel" id="label22">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="xalign">0</property>
                 <property name="label" translatable="yes">File:</property>
                 <property name="justify">fill</property>
-                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -294,6 +312,8 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
           </object>
@@ -1746,37 +1766,41 @@ active document to be saved. </property>
                                   <object class="GtkLabel" id="label14">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
+                                    <property name="xalign">0</property>
                                     <property name="xpad">10</property>
                                     <property name="label" translatable="yes">Nr of files:</property>
-                                    <property name="xalign">0</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">0</property>
                                     <property name="top_attach">2</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
                                   </packing>
                                 </child>
                                 <child>
                                   <object class="GtkLabel" id="label13">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
+                                    <property name="xalign">0</property>
                                     <property name="xpad">10</property>
                                     <property name="label" translatable="yes">Root path:</property>
                                     <property name="ellipsize">end</property>
-                                    <property name="xalign">0</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">0</property>
                                     <property name="top_attach">1</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
                                   </packing>
                                 </child>
                                 <child>
                                   <object class="GtkLabel" id="label26">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
+                                    <property name="xalign">0</property>
                                     <property name="xpad">10</property>
                                     <property name="label" translatable="yes">Project name:</property>
                                     <property name="ellipsize">middle</property>
-                                    <property name="xalign">0</property>
                                     <attributes>
                                       <attribute name="weight" value="bold"/>
                                     </attributes>
@@ -1784,44 +1808,52 @@ active document to be saved. </property>
                                   <packing>
                                     <property name="left_attach">0</property>
                                     <property name="top_attach">0</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
                                   </packing>
                                 </child>
                                 <child>
                                   <object class="GtkLabel" id="proj_name">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
+                                    <property name="xalign">0</property>
                                     <property name="xpad">10</property>
                                     <property name="ellipsize">end</property>
-                                    <property name="xalign">0</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
                                     <property name="top_attach">0</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
                                   </packing>
                                 </child>
                                 <child>
                                   <object class="GtkLabel" id="proj_path">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
+                                    <property name="xalign">0</property>
                                     <property name="xpad">10</property>
                                     <property name="ellipsize">start</property>
-                                    <property name="xalign">0</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
                                     <property name="top_attach">1</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
                                   </packing>
                                 </child>
                                 <child>
                                   <object class="GtkLabel" id="proj_nroffiles">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="xpad">10</property>
                                     <property name="xalign">0</property>
+                                    <property name="xpad">10</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
                                     <property name="top_attach">2</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
                                   </packing>
                                 </child>
                               </object>
@@ -2341,8 +2373,8 @@ bibliography database</property>
               <object class="GtkLabel" id="label20">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Words in:</property>
                 <property name="xalign">0</property>
+                <property name="label" translatable="yes">Words in:</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
                 </attributes>
@@ -2378,8 +2410,8 @@ bibliography database</property>
                       <object class="GtkLabel" id="label18">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">text</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">text</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2391,9 +2423,9 @@ bibliography database</property>
                       <object class="GtkLabel" id="stats_words">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="xalign">1</property>
                         <property name="xpad">10</property>
                         <property name="label" translatable="yes">0</property>
-                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2428,8 +2460,8 @@ bibliography database</property>
                       <object class="GtkLabel" id="label203">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">headers</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">headers</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2441,9 +2473,9 @@ bibliography database</property>
                       <object class="GtkLabel" id="stats_head">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="xalign">1</property>
                         <property name="xpad">10</property>
                         <property name="label" translatable="yes">0</property>
-                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2478,8 +2510,8 @@ bibliography database</property>
                       <object class="GtkLabel" id="label23">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">float captions</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">float captions</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2491,9 +2523,9 @@ bibliography database</property>
                       <object class="GtkLabel" id="stats_float">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="xalign">1</property>
                         <property name="xpad">10</property>
                         <property name="label" translatable="yes">0</property>
-                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2519,8 +2551,8 @@ bibliography database</property>
               <object class="GtkLabel" id="label36">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Number of:</property>
                 <property name="xalign">0</property>
+                <property name="label" translatable="yes">Number of:</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
                 </attributes>
@@ -2556,8 +2588,8 @@ bibliography database</property>
                       <object class="GtkLabel" id="label28">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">headers</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">headers</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2569,9 +2601,9 @@ bibliography database</property>
                       <object class="GtkLabel" id="stats_nrhead">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="xalign">1</property>
                         <property name="xpad">10</property>
                         <property name="label" translatable="yes">0</property>
-                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2606,8 +2638,8 @@ bibliography database</property>
                       <object class="GtkLabel" id="label31">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">floats</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">floats</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2619,9 +2651,9 @@ bibliography database</property>
                       <object class="GtkLabel" id="stats_nrfloat">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="xalign">1</property>
                         <property name="xpad">10</property>
                         <property name="label" translatable="yes">0</property>
-                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2656,8 +2688,8 @@ bibliography database</property>
                       <object class="GtkLabel" id="label34">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">math environments</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">math environments</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2669,9 +2701,9 @@ bibliography database</property>
                       <object class="GtkLabel" id="stats_nrmath">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="xalign">1</property>
                         <property name="xpad">10</property>
                         <property name="label" translatable="yes">0</property>
-                        <property name="xalign">1</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -3253,8 +3285,9 @@ current active document.</property>
             </child>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
+            <property name="padding">10</property>
             <property name="position">1</property>
           </packing>
         </child>
@@ -3291,12 +3324,14 @@ current active document.</property>
               <object class="GtkLabel" id="label8">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Rows:</property>
                 <property name="xalign">0</property>
+                <property name="label" translatable="yes">Rows:</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -3313,6 +3348,8 @@ current active document.</property>
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -3329,6 +3366,8 @@ current active document.</property>
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">1</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -3347,6 +3386,8 @@ current active document.</property>
               <packing>
                 <property name="left_attach">2</property>
                 <property name="top_attach">1</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -3358,18 +3399,22 @@ current active document.</property>
               <packing>
                 <property name="left_attach">2</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="label9">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Columns:</property>
                 <property name="xalign">0</property>
+                <property name="label" translatable="yes">Columns:</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">1</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
           </object>
@@ -3449,12 +3494,14 @@ current active document.</property>
               <object class="GtkLabel" id="label6">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Rows:</property>
                 <property name="xalign">0</property>
+                <property name="label" translatable="yes">Rows:</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -3471,6 +3518,8 @@ current active document.</property>
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -3487,6 +3536,8 @@ current active document.</property>
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">1</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -3505,6 +3556,8 @@ current active document.</property>
               <packing>
                 <property name="left_attach">2</property>
                 <property name="top_attach">1</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -3523,18 +3576,22 @@ current active document.</property>
               <packing>
                 <property name="left_attach">2</property>
                 <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="label7">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Columns:</property>
                 <property name="xalign">0</property>
+                <property name="label" translatable="yes">Columns:</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">1</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
               </packing>
             </child>
           </object>

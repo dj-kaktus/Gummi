@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.18.3 -->
+<!-- Generated with glade 3.16.1 -->
 <interface>
-  <requires lib="gtk+" version="3.12"/>
+  <requires lib="gtk+" version="3.2"/>
   <object class="GtkAdjustment" id="autosave_time">
     <property name="lower">1</property>
     <property name="upper">60</property>
@@ -12,7 +12,7 @@
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="icon-name">edit-clear</property>
+    <property name="icon_name">edit-clear</property>
   </object>
   <object class="GtkListStore" id="list_compileschemes">
     <columns>
@@ -121,8 +121,8 @@
                       <object class="GtkLabel" id="label6">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Highlighting</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Highlighting</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -168,8 +168,8 @@
                       <object class="GtkLabel" id="label5">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Line numbers</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Line numbers</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -215,8 +215,8 @@
                       <object class="GtkLabel" id="label4">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Text wrapping</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Text wrapping</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -311,8 +311,8 @@
                       <object class="GtkLabel" id="label15">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Tab stops</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Tab stops</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -401,8 +401,8 @@
                       <object class="GtkLabel" id="label17">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Automatic Indentation</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Automatic Indentation</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -448,8 +448,8 @@
                       <object class="GtkLabel" id="label36">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Snippets</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Snippets</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -494,8 +494,8 @@
                       <object class="GtkLabel" id="label10">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">File saving</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">File saving</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -608,8 +608,8 @@
                       <object class="GtkLabel" id="label12">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Editor font</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Editor font</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -663,8 +663,8 @@
                       <object class="GtkLabel" id="label34">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Color Scheme</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Color Scheme</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -817,8 +817,8 @@
                       <object class="GtkLabel" id="label8">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Typesetter command</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Typesetter command</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -938,8 +938,8 @@
                       <object class="GtkLabel" id="label41">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Typesetter options</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Typesetter options</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -1019,8 +1019,8 @@
                       <object class="GtkLabel" id="label43">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Compilation steps</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Compilation steps</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -1138,8 +1138,8 @@
                       <object class="GtkLabel" id="label13">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">PDF Compiling</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">PDF Compiling</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -1263,8 +1263,8 @@
                       <object class="GtkLabel" id="label45">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Use animated scroll</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Use animated scroll</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -1313,8 +1313,8 @@
                       <object class="GtkLabel" id="label47">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Cache size</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Cache size</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -1421,8 +1421,8 @@
                       <object class="GtkLabel" id="label9">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Spell check language</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Spell check language</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
@@ -1462,8 +1462,8 @@
                       <object class="GtkLabel" id="label38">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">PDF Exporting</property>
                         <property name="xalign">0</property>
+                        <property name="label" translatable="yes">PDF Exporting</property>
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
