@@ -146,15 +146,6 @@ int main(int argc, char *argv[])
   slog_set_gui_parent(gui->mainwindow);
   slog(L_DEBUG, "GummiGui created!\n");
 
-  /* Start compile thread */
-  if (external_exists(config_get_value("typesetter"))) {
-    typesetter_setup();
-    motion_start_compile_thread(motion);
-  } else {
-    infoscreengui_enable(gui->infoscreengui, "program_error");
-    slog(L_ERROR, "Could not locate the typesetter program\n");
-  }
-
   /* Install acceleration group to mainwindow */
   gtk_window_add_accel_group(gui->mainwindow, snippets->accel_group);
 
@@ -169,8 +160,19 @@ int main(int argc, char *argv[])
     tabmanager_create_tab(A_LOAD, argv[1], NULL);
   }
 
+  /* Start auto saving function */
   if (config_get_value("autosaving")) iofunctions_start_autosave();
 
+  /* Start compile thread */
+  if (external_exists(config_get_value("typesetter"))) {
+    typesetter_setup();
+    motion_start_compile_thread(motion);
+  } else {
+    infoscreengui_enable(gui->infoscreengui, "program_error");
+    slog(L_ERROR, "Could not locate the typesetter program\n");
+  }
+
+  /* Start GUI */
   gui_main(builder);
   config_save();
   config_clean_up();
