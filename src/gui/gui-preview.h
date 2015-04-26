@@ -180,6 +180,8 @@ void previewgui_start_preview(GuPreviewGui* pc);
 void previewgui_drawarea_resize(GuPreviewGui* pc);
 void previewgui_stop_preview(GuPreviewGui* pc);
 void previewgui_start_errormode(GuPreviewGui *pc, const gchar *msg);
+void on_document_compiled(gpointer* user);
+void on_document_error(gpointer* user);
 void on_page_input_changed(GtkEntry* entry, void* user);
 void on_next_page_clicked(GtkWidget* widget, void* user);
 void on_prev_page_clicked(GtkWidget* widget, void* user);
@@ -197,6 +199,5 @@ void previewgui_set_page_layout(GuPreviewGui* pc,
                                 PopplerPageLayout pageLayout);
 
 gboolean run_garbage_collector(GuPreviewGui* pc);
-
 
 #endif /* __GUMMI_GUI_PREVIEW_H__ */

@@ -198,8 +198,7 @@ gpointer motion_compile_thread(gpointer data)
     g_free(editortext);
 
     if (!precompile_ok) {
-      g_signal_emit_by_name(gui->previewgui->sig_hook, "document-error",
-          "document_error");
+      gdk_threads_add_idle(on_document_error, "document_error");
       g_mutex_unlock(&mc->compile_mutex);
       continue;
     }
@@ -215,8 +214,7 @@ gpointer motion_compile_thread(gpointer data)
     if (!mc->keep_running)
       g_thread_exit(NULL);
 
-    g_signal_emit_by_name(gui->previewgui->sig_hook, "document-compiled",
-        editor);
+    gdk_threads_add_idle(on_document_compiled, editor);
   }
 }
 

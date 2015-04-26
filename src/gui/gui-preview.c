@@ -92,8 +92,6 @@ typedef struct {
 } SyncNode;
 
 
-static void on_document_compiled(GObject* hook, GuEditor* editor);
-static void on_document_error(GObject* hook, const gchar* error_text);
 static void previewgui_set_scale(GuPreviewGui* pc, gdouble scale, gdouble x,
                                  gdouble y);
 
@@ -169,11 +167,6 @@ GuPreviewGui* previewgui_init(GtkBuilder * builder)
 
   GuPreviewGui* p = g_new0(GuPreviewGui, 1);
   p->sig_hook = g_object_new(G_TYPE_OBJECT, NULL);
-
-  g_signal_connect(p->sig_hook, "document-compiled",
-                   G_CALLBACK(on_document_compiled), NULL);
-  g_signal_connect(p->sig_hook, "document-error",
-                   G_CALLBACK(on_document_error), NULL);
 
   GdkRGBA bg = {0.90, 0.90, 0.90, 1.0};
   p->previewgui_viewport =
@@ -337,8 +330,9 @@ void previewgui_stop_errormode(GuPreviewGui *pc)
   pc->errormode = FALSE;
 }
 
-static void on_document_compiled(GObject* hook, GuEditor* editor)
+void on_document_compiled(gpointer* user)
 {
+  GuEditor* editor = GU_EDITOR(user);
   GuLatex* latex = gummi_get_latex();
   GuPreviewGui* pc = gui->previewgui;
 
@@ -366,9 +360,9 @@ static void on_document_compiled(GObject* hook, GuEditor* editor)
   }
 }
 
-static void on_document_error(GObject* hook, const gchar* error_text)
+void on_document_error(gpointer* user)
 {
-  previewgui_start_errormode(gui->previewgui, error_text);
+  previewgui_start_errormode(gui->previewgui, (const gchar*)user);
 }
 
 inline static gint get_document_margin(GuPreviewGui* pc)
