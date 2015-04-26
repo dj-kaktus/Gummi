@@ -480,7 +480,7 @@ static gboolean previewgui_animated_scroll_step(gpointer data)
 
 void previewgui_update_statuslight(const gchar* type)
 {
-  gtk_tool_button_set_stock_id(GTK_TOOL_BUTTON(gui->previewgui->statuslight),
+  gtk_tool_button_set_icon_name(GTK_TOOL_BUTTON(gui->previewgui->statuslight),
       type);
 }
 
