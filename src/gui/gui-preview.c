@@ -329,7 +329,7 @@ void previewgui_stop_errormode(GuPreviewGui *pc)
   pc->errormode = FALSE;
 }
 
-void on_document_compiled(gpointer* user)
+gboolean on_document_compiled(gpointer user)
 {
   GuEditor* editor = GU_EDITOR(user);
   GuLatex* latex = gummi_get_latex();
@@ -357,11 +357,14 @@ void on_document_compiled(gpointer* user)
       if (pc->errormode) previewgui_stop_errormode(pc);
     }
   }
+
+  return FALSE;
 }
 
-void on_document_error(gpointer* user)
+gboolean on_document_error(gpointer user)
 {
   previewgui_start_errormode(gui->previewgui, (const gchar*)user);
+  return FALSE;
 }
 
 inline static gint get_document_margin(GuPreviewGui* pc)
