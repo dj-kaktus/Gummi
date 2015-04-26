@@ -91,6 +91,7 @@ AC_CONFIG_FILES([Makefile
 		 lib/Makefile
 		 po/Makefile.in
 		 data/misc/$PACKAGE.desktop
+		 data/misc/default.tex
 		 ])
 AC_OUTPUT
 
