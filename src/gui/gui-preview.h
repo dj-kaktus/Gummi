@@ -91,8 +91,6 @@ struct _GuPreviewPage {
 typedef struct _GuPreviewGui GuPreviewGui;
 
 struct _GuPreviewGui {
-  GObject* sig_hook;
-
   PopplerDocument* doc;
   GtkViewport* previewgui_viewport;
   GtkWidget* previewgui_toolbar;

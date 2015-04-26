@@ -166,7 +166,6 @@ GuPreviewGui* previewgui_init(GtkBuilder * builder)
   g_return_val_if_fail(GTK_IS_BUILDER(builder), NULL);
 
   GuPreviewGui* p = g_new0(GuPreviewGui, 1);
-  p->sig_hook = g_object_new(G_TYPE_OBJECT, NULL);
 
   GdkRGBA bg = {0.90, 0.90, 0.90, 1.0};
   p->previewgui_viewport =
