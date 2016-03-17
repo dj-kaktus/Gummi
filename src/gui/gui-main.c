@@ -459,11 +459,13 @@ void gui_save_file(GuTabContext* tab, gboolean saveas)
   gtk_widget_grab_focus(focus);
 
   iofunctions_save_file(gummi->io, filename, text);
-
-  if (config_get_value("autoexport")) {
-    pdfname = g_strdup(filename);
-    pdfname[strlen(pdfname) - 4] = 0;
-    latex_export_pdffile(gummi->latex, tab->editor, pdfname, FALSE);
+  //verify that the file is a tex file to export to pdf 
+  if(strlen(filename)>4 && STR_EQU(filename + strlen(filename) - 4, ".tex")){
+    if (config_get_value("autoexport")) {
+      pdfname = g_strdup(filename);
+      pdfname[strlen(pdfname) - 4] = 0;
+      latex_export_pdffile(gummi->latex, tab->editor, pdfname, FALSE);
+    }
   }
   if (new) tabmanager_update_tab(filename);
   gui_set_filename_display(tab, TRUE, TRUE);
