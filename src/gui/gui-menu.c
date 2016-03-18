@@ -177,8 +177,11 @@ void on_menu_export_activate(GtkWidget *widget, void *user)
   gchar* filename = NULL;
 
   filename = get_save_filename(TYPE_PDF);
-  if (filename)
-    latex_export_pdffile(gummi->latex, g_active_editor, filename, TRUE);
+  if (filename){
+    if(strlen(filename) > 4 && STR_EQU(filename + strlen(filename) - 4, ".tex")){
+      latex_export_pdffile(gummi->latex, g_active_editor, filename, TRUE);
+	 }
+  }
   g_free(filename);
 }
 
