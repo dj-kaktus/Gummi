@@ -564,12 +564,12 @@ void editor_insert_bib(GuEditor* ec, const gchar* package)
 {
   GtkTextIter start, end, mstart, mend, sstart, send;
   gchar* pkgstr = g_strdup_printf(
-                    "\\bibliography{%s}{}\n\\bibliographystyle{plain}\n", package);
+                    "\\printbibliography\n");
   gtk_text_buffer_get_start_iter(ec_buffer, &start);
   gtk_text_buffer_get_end_iter(ec_buffer, &end);
   gtk_text_iter_backward_search(&end, (gchar*)"\\end{document}", 0,
                                 &mstart, &mend, NULL);
-  if (!gtk_text_iter_forward_search(&start, "\\bibliography{", 0,
+  if (!gtk_text_iter_forward_search(&start, "\\printbibliography", 0,
                                     &sstart, &send, NULL)) {
     gtk_source_buffer_begin_not_undoable_action(ec->buffer);
     gtk_text_buffer_begin_user_action(ec_buffer);
