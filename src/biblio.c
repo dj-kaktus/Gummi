@@ -70,7 +70,7 @@ gboolean biblio_detect_bibliography(GuBiblio* bc, GuEditor* ec)
   gboolean state = FALSE;
 
   content = editor_grab_buffer(ec);
-  bib_regex = g_regex_new("^[^%]*\\\\bibliography{\\s*([^{}\\s]*)\\s*}",
+  bib_regex = g_regex_new("^[^%]*\\\\addbibresource{\\s*([^{}\\s]*)\\s*}",
                           G_REGEX_MULTILINE, 0, NULL);
   if (g_regex_match(bib_regex, content, 0, &match_info)) {
     result = g_match_info_fetch_all(match_info);
@@ -102,9 +102,9 @@ gboolean biblio_compile_bibliography(GuBiblio* bc, GuEditor* ec, GuLatex* lc)
   } else
     auxname = g_strdup(ec->fdname);
 
-  if (g_find_program_in_path("bibtex")) {
+  if (g_find_program_in_path("biber")) {
     gboolean success = FALSE;
-    char* command = g_strdup_printf("%s bibtex \"%s\"",
+    char* command = g_strdup_printf("%s biber \"%s\"",
                                     C_TEXSEC, auxname);
 
     g_free(auxname);
@@ -115,11 +115,11 @@ gboolean biblio_compile_bibliography(GuBiblio* bc, GuEditor* ec, GuLatex* lc)
                                 (gchar*)res.second);
     g_free(command);
     g_free(dirname);
-    success = !(strstr((gchar*)res.second, "Database file #1") == NULL);
+    success = !(strstr((gchar*)res.second, "INFO - Output to") == NULL);
     g_free(res.second);
     return success;
   }
-  slog(L_WARNING, "bibtex command is not present or executable.\n");
+  slog(L_WARNING, "biber command is not present or executable.\n");
   g_free(auxname);
   g_free(dirname);
   return FALSE;
